@@ -64,6 +64,12 @@ async function loginUserController(req, res) {
         })
     }
 
+    if(!password) {
+        return res.status(400).json({
+            message: "Please enter password"
+        })
+    }
+
     const user = await User.findOne({
         $or: [{username}, {email}]
     })
