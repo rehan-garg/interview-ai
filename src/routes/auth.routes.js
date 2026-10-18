@@ -1,6 +1,6 @@
 const express = require('express')
 const authRouter = express.Router()
-
+const authMiddleware = require('../middlewares/auth.middleware')
 
 
 const { 
@@ -38,6 +38,6 @@ authRouter.get('/logout', logoutUserController)
  * @description get the current logged in user details
  * @access private
  */
-authRouter.get('/get-me', getMeUserController)
+authRouter.get('/get-me', authMiddleware.authUser, getMeUserController)
 
 module.exports = authRouter
