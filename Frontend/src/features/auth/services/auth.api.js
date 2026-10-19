@@ -19,16 +19,16 @@ export async function register({username, email, password}) {
 }
 
 
-export async function login({username, email, password}) {
+export async function login({email, password}) {
     try {
         const response = await api.post('/api/auth/login', {
-            username, email, password
+            email, password
         })
 
         return response.data
 
     } catch (error) {
-        console.log("Error in calling register route from frontend", error)
+        console.log("Error in calling login route from frontend", error)
     }
 }
 
