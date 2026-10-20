@@ -10,7 +10,7 @@ const generateInterviewReport = require('./services/ai.service.js')
 const {resume, selfDescription, jobDescription} = require('./services/temp.js')
 
 connectDB();
-generateInterviewReport({resume, selfDescription, jobDescription})
+// generateInterviewReport({resume, selfDescription, jobDescription})
 
 const PORT = process.env.PORT || 5000;
 
