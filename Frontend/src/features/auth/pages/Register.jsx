@@ -52,7 +52,7 @@ export default function Register() {
                         type="password" id="password" name="password" placeholder="Enter password" />
                     </div>
 
-                    <button className="button primary-button">Login</button>
+                    <button className="button primary-button">Register</button>
                 </form>
 
                 <p>Already have an account? <Link to={'/login'}>Login</Link> </p>
